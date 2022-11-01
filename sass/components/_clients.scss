@@ -1,0 +1,25 @@
+.clients__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.clients__link {
+    width: 170px;
+    height: 92px;
+    border: solid 1px var(--icons-grey-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--icons-grey-color);
+    transition-timing-function: var(--cubic);
+    transition-duration: var(--period);
+    &:hover,
+    &:focus {
+        fill: var(--brand-color);
+        border-color: var(--brand-color);
+    }
+}
+

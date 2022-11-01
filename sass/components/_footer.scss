@@ -1,0 +1,127 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
+}
+
+.container-footer {
+    display: flex;
+    align-items: baseline;
+
+}
+
+.footer-main {
+    margin-right: 70px;
+}
+
+.address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    display: block;
+    display: flex;
+}
+
+.address__link {
+    transition-timing-function: var(--cubic);
+    transition-duration: var(--period);
+    &:hover,
+    &:focus {
+        color: var(--brand-color);
+        }
+}
+
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__link--map {
+    color: var(--white-brand-color);
+}
+
+.address__link--contacts {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.footer-soc-links {
+    margin-right: 93px;
+}
+
+.footer-soc-links__list {
+    display: flex;
+    gap: 10px;
+
+}
+
+.footer-soc-links__title,
+.sign-up__title {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-soc-links__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    fill: #FFFFFF;
+
+    transition-timing-function: var(--cubic);
+    transition-duration: var(--period);
+}
+
+.footer-soc-links__link:hover,
+.footer-soc-links__link:focus {
+    background-color: var(--brand-color);
+}
+
+.sign-up-form {
+    display: flex;
+}
+
+.sign-up-form__input {
+    height: 50px;
+    width: 358px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 16px;
+    margin-right: 12px;
+    outline: none;
+    color: var(--text-color);
+
+}
+
+.sign-up-form__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--text-color);
+}
+
+.sign-up-form__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--white-brand-color);
+    background-color: var(--brand-color);
+    border-color: transparent;
+    border-radius: 4px;
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

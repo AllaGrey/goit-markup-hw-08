@@ -1,0 +1,28 @@
+.section-team {
+    background: #F5F4FA;
+}
+
+.team__title,
+.clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--dark-brand-color);
+    margin-bottom: 50px;
+}
+
+.team__list {
+    display: flex;
+    gap: 30px;
+}
+
+.team__item {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    width: calc((100% - 90px) / 4);
+}

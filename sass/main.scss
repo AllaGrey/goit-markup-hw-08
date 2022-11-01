@@ -1,0 +1,41 @@
+@import './base/common';
+@import './utils/vars';
+@import './base/reset';
+@import './utils/visually-hidden';
+@import './components/container';
+
+// MODAL
+@import './components/modal';
+
+// HEADER
+@import './components/header';
+
+// LOGO
+@import './components/logo';
+
+// FOOTER
+@import './components/footer';
+
+// HERO
+@import './components/hero';
+@import './components/order-button';
+
+// FEATURES
+@import './components/features';
+
+// WORKS
+@import './components/works';
+
+// TEAM
+@import './components/team';
+@import './components/team-card';
+
+// CLIENTS
+@import './components/clients';
+
+// PORTFOLIO
+@import './components/projects';
+@import './components/project-card';
+
+// BACKDROP
+@import './components/backdrop';
