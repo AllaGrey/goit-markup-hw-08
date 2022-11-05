@@ -1,8 +1,19 @@
 .filter-menu__list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: left;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @include tablet {
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 
@@ -37,6 +48,13 @@
 }
 
 .projects__item {
-    width: calc((100% - 60px) / 3);
 
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+        height: 100%;
+    }
+
+    @include desktop {
+        width: calc((100% - 60px) / 3);
+    }
 }

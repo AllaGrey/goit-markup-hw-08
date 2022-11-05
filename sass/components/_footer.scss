@@ -5,13 +5,43 @@
 }
 
 .container-footer {
-    display: flex;
-    align-items: baseline;
 
+    display: block;
+    
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+    }
 }
 
+.footer__main-soc-links-box {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+        max-height: 135px;
+    }
+}
 .footer-main {
-    margin-right: 70px;
+    
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 370px;
+    }
+
+    @include desktop {
+        margin-right: 70px;
+        text-align: left;
+    }
 }
 
 .address {
@@ -20,7 +50,7 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     display: block;
-    display: flex;
+
 }
 
 .address__link {
@@ -48,13 +78,15 @@
 
 
 .footer-soc-links {
-    margin-right: 93px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
 }
 
 .footer-soc-links__list {
     display: flex;
     gap: 10px;
-
+    justify-content: center;
 }
 
 .footer-soc-links__title,
@@ -63,7 +95,13 @@
     color: #FFFFFF;
     font-weight: 700;
     font-size: 14px;
+    line-height: 1.14;
     margin-bottom: 20px;
+    text-align: center;
+
+    @include desktop {
+        text-align: left;   
+        }
 }
 
 .footer-soc-links__link {
@@ -85,21 +123,45 @@
     background-color: var(--brand-color);
 }
 
+.sign-up {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
 .sign-up-form {
-    display: flex;
+    @include desktop {
+        display: flex;
+    }
+
 }
 
 .sign-up-form__input {
-    height: 50px;
-    width: 358px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: calc(100% - 30px);
+    
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 15px 16px;
-    margin-right: 12px;
+    
+    margin-bottom: 20px;
     outline: none;
     color: var(--text-color);
 
+    @include mobile {
+        max-width: 450px;
+    }
+
+    @include desktop {
+        margin-right: 12px;
+        height: 50px;
+        width: 358px;
+    }
 }
 
 .sign-up-form__input::placeholder {
@@ -118,10 +180,13 @@
     background-color: var(--brand-color);
     border-color: transparent;
     border-radius: 4px;
-    min-width: 200px;
-    min-height: 50px;
+    width: 200px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
 }

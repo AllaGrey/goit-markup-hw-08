@@ -5,16 +5,25 @@
 .team__title,
 .clients__title {
     font-weight: 700;
-    font-size: 36px;
+    
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--dark-brand-color);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    
+
+    @include desktop {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -24,5 +33,17 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--text-color);
-    width: calc((100% - 90px) / 4);
+    display: block;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+    
+    }
+    
+    @include desktop {
+        width: calc((100% - 30px * 3) / 4);
+    
+    }
 }

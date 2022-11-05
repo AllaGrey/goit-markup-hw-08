@@ -1,24 +1,50 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-color: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-image: var(--bg-gradient), url(../images/hero-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include retuna {
+        background-image: var(--bg-gradient), url(../images/hero-mob-2x.jpg);
+        }
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @include tablet {
+        background-image: var(--bg-gradient), url(../images/hero-tablet-1x.jpg);
+        @include retuna {
+            background-image: var(--bg-gradient), url(../images/hero-tablet-2x.jpg);
+        }
+    }
+
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: var(--bg-gradient), url(../images/hero.jpg);
+        @include retuna {
+            background-image: var(--bg-gradient), url(../images/hero-2x.jpg);
+        }
+        }
 }
 
 .hero__title {
     display: block;
+    font-size: 26px;
+    line-height: 1.61;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-brand-color);
-    max-width: 696px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 696px;
+        }
 } 

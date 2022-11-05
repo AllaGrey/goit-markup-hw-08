@@ -1,7 +1,23 @@
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+
     border-bottom: solid 2px #ECECEC;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include desktop {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+.mob-menu-btn {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .header__container {
@@ -10,8 +26,13 @@
 }
 
 .header-nav {
-    display: flex;
-    align-items: center;
+
+    display: none;
+    
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .header-nav__list,
@@ -21,7 +42,7 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     display: flex;
-
+    
 }
 
 .header-nav__list--menu {
@@ -29,6 +50,7 @@
     display: flex;
     gap: 50px;
     color: var(--dark-brand-color);
+    
 }
 
 .header-nav__item {
@@ -41,24 +63,41 @@
             content: '';
             position: absolute;
             left: 0;
-            bottom: -33px;
+            bottom: -31px;
             width: 100%;
             height: 4px;
             border-radius: 2px;
     
             background-color: var(--brand-color);
         }
+
+        @include desktop {
+            bottom: -33px;
+        }
 }
 
 
 
 .header-nav__list--contacts {
-    display: flex;
-    margin-left: auto;
 
-    gap: 50px;
+    display: none;
+
+    @include tablet {
+        display: block;
+        margin-left: auto;
+    }
+
+    @include desktop {
+        display: flex;
+        gap: 30px;
+    }
 }
 
+.header-nav__item--contacts:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 10px;
+        }
+    }
 
 .header-nav__icon {
     margin-right: 10px;
@@ -80,4 +119,120 @@
             color: var(--brand-color);
         }
             
+}
+
+.mob-menu {
+    
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    padding: 48px 25px;
+        > .mob-menu__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.mob-menu__btn-close {
+    border: transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    transition-duration: var(--period);
+    transition-timing-function: var(--cubic);
+    &:hover .mob-menu__icon,
+    &:focus .mob-menu__icon {
+        fill: var(--brand-color);
+    }
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+
+.mob-menu-nav__list {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    margin-bottom: 50px;
+}
+
+.mob-menu-nav__item {
+    margin-bottom: 32px;
+}
+
+.mob-menu-nav__link--current-page {
+    color: var(--brand-color);
+}
+
+.mob-menu__list {
+    margin-bottom: 32px;
+    
+
+}
+
+.mob-menu__item {
+    &:first-child {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        margin-bottom: 32px;
+        }
+    &:last-child {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+    }
+}
+
+.mob-menu__link--tel {
+    @media screen and (max-width: 479px) {
+        font-size: 20px;
+    }
+    color: var(--brand-color);
+}
+
+.mob-menu__link--email {
+    @media screen and (max-width: 479px) {
+        font-size: 16px;
+        }
+    color: var(--text-color);
+}
+
+.mob-menu__list-soc-links {
+    display: flex;
+    // justify-content: left;
+        @media screen and (max-width: 479px) {
+                flex-wrap: wrap;
+            }
+}
+
+
+
+.mob-menu__item-soc-links {
+    
+    padding-right: 10px;
+    &:not(:first-child) {
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+        padding-left: 10px;
+    }
+    
+}
+
+.mob-menu__link-soc-links {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--brand-color);
 }
