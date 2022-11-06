@@ -340,10 +340,22 @@ ol {
 .header-nav__list,
 .header__link--contacts {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
+}
+
+.header-nav__list {
+  font-size: 14px;
+}
+
+.header-nav__list--contacts {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-nav__list--contacts {
+    font-size: 12px;
+  }
 }
 
 .header-nav__list--menu {
@@ -480,6 +492,7 @@ ol {
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  margin-bottom: 64px;
 }
 
 .mob-menu__link--tel {
@@ -493,6 +506,7 @@ ol {
 
 .mob-menu__link--email {
   color: var(--text-color);
+  margin-bottom: 64px;
 }
 @media screen and (max-width: 479px) {
   .mob-menu__link--email {
@@ -799,6 +813,11 @@ ol {
   margin-right: auto;
   padding-left: auto;
   padding-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 400px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
